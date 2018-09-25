@@ -11,6 +11,10 @@ def main(): #main function
     screen = pygame.display.set_mode((640, 480))
     #sets up the window. default resolution is 480p
 
+    logo = pygame.image.load("_assets/breakout.jpg")
+    pygame.display.set_icon(logo)
+    #sets the logo as the designated logo
+
     running = True
     while running:
         for event in pygame.event.get():
@@ -18,6 +22,7 @@ def main(): #main function
                 pygame.quit
                 os._exit(1)
                 running = False
+    #main run loop
 
 if __name__ == "__main__":
     main()
